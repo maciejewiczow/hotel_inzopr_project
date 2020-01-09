@@ -1,6 +1,6 @@
 [submodule "vendor/SQLiteCpp"]
 	path = vendor/SQLiteCpp
 	url = https://github.com/SRombauts/SQLiteCpp.git
-[submodule "vendor/PDCurses"]
-	path = vendor/PDCurses
+[submodule "vendor/PDcurses"]
+	path = vendor/PDcurses
 	url = https://github.com/maciejewiczow/PDCurses.git
