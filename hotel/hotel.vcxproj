@@ -72,7 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)vendor\PDcurses;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)vendor\odb\libodb-sqlite-2.4.0;$(SolutionDir)vendor\PDcurses;$(IncludePath);$(SolutionDir)vendor\odb\libodb-2.4.0</IncludePath>
+    <LibraryPath>$(SolutionDir)vendor\odb\libodb-2.4.0\lib;$(SolutionDir)vendor\odb\libodb-sqlite-2.4.0\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(SolutionDir)vendor\odb\libodb-2.4.0\lib;$(SolutionDir)vendor\odb\libodb-2.4.0\lib</LibraryPath>
+    <ExecutablePath>$(SolutionDir)vendor\odb\libodb-2.4.0\bin;$(SolutionDir)vendor\odb\libodb-sqlite-2.4.0\bin;$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(SolutionDir)vendor\odb\libodb-2.4.0\bin</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -80,7 +82,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)vendor\PDcurses;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)vendor\odb\libodb-sqlite-2.4.0;$(SolutionDir)vendor\PDcurses;$(IncludePath);$(SolutionDir)vendor\odb\libodb-2.4.0</IncludePath>
+    <ExecutablePath>$(SolutionDir)vendor\odb\libodb-2.4.0\bin;$(SolutionDir)vendor\odb\libodb-sqlite-2.4.0\bin;$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(SolutionDir)vendor\odb\libodb-2.4.0\bin$(SolutionDir)vendor\odb\libodb-2.4.0\bin</ExecutablePath>
+    <LibraryPath>$(SolutionDir)vendor\odb\libodb-2.4.0\lib;$(SolutionDir)vendor\odb\libodb-sqlite-2.4.0\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(SolutionDir)vendor\odb\libodb-2.4.0\lib$(SolutionDir)vendor\odb\libodb-2.4.0\lib;$(SolutionDir)vendor\odb\libodb-2.4.0\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -95,12 +99,13 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\debug\pdcurses.lib;$(SolutionDir)vendor\SQLiteCpp\build\Debug\SQLiteCpp.lib;$(SolutionDir)vendor\SQLiteCpp\build\sqlite3\Debug\sqlite3.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -112,12 +117,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\debug\pdcurses.lib;$(SolutionDir)vendor\SQLiteCpp\build\Debug\SQLiteCpp.lib;$(SolutionDir)vendor\SQLiteCpp\build\sqlite3\Debug\sqlite3.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -132,13 +138,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\release\pdcurses.lib;$(SolutionDir)vendor\SQLiteCpp\build\Release\SQLiteCpp.lib;$(SolutionDir)vendor\SQLiteCpp\build\sqlite3\Release\sqlite3.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,13 +160,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)vendor\PDcurses\wincon\release\pdcurses.lib;$(SolutionDir)vendor\SQLiteCpp\build\Release\SQLiteCpp.lib;$(SolutionDir)vendor\SQLiteCpp\build\sqlite3\Release\sqlite3.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
