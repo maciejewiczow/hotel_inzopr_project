@@ -33,9 +33,6 @@
     <ClInclude Include="models\Damage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="models\Databse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="models\Guest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -60,6 +57,9 @@
     <ClInclude Include="models\Reservation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="models\Database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -77,9 +77,6 @@
     <ClCompile Include="controllers\RoomController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="models\Databse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="models\Model.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -93,6 +90,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="views\View.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="models\Guest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="models\Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="models\Reservation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="models\Room.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

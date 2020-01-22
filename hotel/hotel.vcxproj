@@ -100,7 +100,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)hotel;$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,7 +118,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)hotel;$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,7 +138,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)hotel;$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -160,7 +160,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)hotel;$(SolutionDir)vendor\SQLiteCpp\include;$(SolutionDir)vendor\PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -176,7 +176,7 @@
     <ClInclude Include="controllers\ReservationController.h" />
     <ClInclude Include="controllers\RoomController.h" />
     <ClInclude Include="models\Damage.h" />
-    <ClInclude Include="models\Databse.h" />
+    <ClInclude Include="models\Database.h" />
     <ClInclude Include="models\Guest.h" />
     <ClInclude Include="models\Model.h" />
     <ClInclude Include="models\Reservation.h" />
@@ -192,8 +192,11 @@
     <ClCompile Include="controllers\ReservationController.cpp" />
     <ClCompile Include="controllers\RoomController.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="models\Databse.cpp" />
+    <ClCompile Include="models\Database.cpp" />
+    <ClCompile Include="models\Guest.cpp" />
     <ClCompile Include="models\Model.cpp" />
+    <ClCompile Include="models\Reservation.cpp" />
+    <ClCompile Include="models\Room.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
