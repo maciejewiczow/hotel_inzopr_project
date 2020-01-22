@@ -5,7 +5,7 @@ namespace hotel {
 	class View {
 
 	private:
-		Window window;
+		window Window;
 
 	public:
 		void display();

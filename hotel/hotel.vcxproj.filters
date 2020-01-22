@@ -54,6 +54,12 @@
     <ClInclude Include="views\View.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="models\Room.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="models\Reservation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

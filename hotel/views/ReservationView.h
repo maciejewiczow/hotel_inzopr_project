@@ -1,6 +1,9 @@
 #ifndef RESERVATIONVIEW_H
 #define RESERVATIONVIEW_H
-
+#include "View.h"
+#include "../models/Room.h"
+#include "../models/Reservation.h"
+#include <functional>
 namespace hotel {
 	class ReservationView : hotel::View {
 
@@ -10,7 +13,7 @@ namespace hotel {
 
 		void display(hotel::Reservation reservation);
 
-		void createReservationForm(hotel::Function<hotel::Reservation, void> onSubmit);
+		void createReservationForm(std::function<void(hotel::Reservation)> onSubmit);
 	};
 }
 

@@ -9,8 +9,8 @@ namespace hotel {
 
     private:
         int ID;
-        std::string opis;
-        float wycena;
+        std::string description;
+        float price;
     };
 }
 

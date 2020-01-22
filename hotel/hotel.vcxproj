@@ -179,6 +179,8 @@
     <ClInclude Include="models\Databse.h" />
     <ClInclude Include="models\Guest.h" />
     <ClInclude Include="models\Model.h" />
+    <ClInclude Include="models\Reservation.h" />
+    <ClInclude Include="models\Room.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="views\DamageView.h" />
     <ClInclude Include="views\GuestView.h" />

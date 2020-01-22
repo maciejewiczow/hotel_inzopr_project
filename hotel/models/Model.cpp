@@ -5,7 +5,7 @@ hotel::Model* hotel::Model::getAll() {
 	throw "Not yet implemented";
 }
 
-hotel::Model hotel::Model::getOne(Predicate p) {
+hotel::Model hotel::Model::getOne(predicate p) {
 	// TODO - implement Model::getOne
 	throw "Not yet implemented";
 }
@@ -15,12 +15,12 @@ void hotel::Model::save() {
 	throw "Not yet implemented";
 }
 
-hotel::Model hotel::Model::sort(hotel::Function<(Model, Model), bool> c) {
+hotel::Model hotel::Model::sort(std::function<bool(Model, Model)> c) {
 	// TODO - implement Model::sort
 	throw "Not yet implemented";
 }
 
-hotel::Model* hotel::Model::getAll(hotel::Function<hotel::Model, bool> p) {
+hotel::Model* hotel::Model::getAll(std::function<bool(hotel::Model)> p) {
 	// TODO - implement Model::getAll
 	throw "Not yet implemented";
 }

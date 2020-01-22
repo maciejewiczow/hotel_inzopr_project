@@ -10,7 +10,7 @@ void hotel::ReservationView::display(hotel::Reservation reservation) {
 	throw "Not yet implemented";
 }
 
-void hotel::ReservationView::createReservationForm(hotel::Function<hotel::Reservation, void> onSubmit) {
+void hotel::ReservationView::createReservationForm(std::function<void(hotel::Reservation)> onSubmit) {
 	// TODO - implement ReservationView::createReservationForm
 	throw "Not yet implemented";
 }
