@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "RoomController.h"
 
 void hotel::RoomController::getFreeRooms(hotel::timeStamp start, hotel::timeStamp end) {
