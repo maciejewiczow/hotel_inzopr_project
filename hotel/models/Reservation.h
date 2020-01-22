@@ -11,5 +11,7 @@ namespace hotel {
 		int ID;
 		timeStamp Start;
 		timeStamp End;
+	public:
+		Reservation();
 	};
 }

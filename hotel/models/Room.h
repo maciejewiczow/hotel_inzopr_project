@@ -13,6 +13,7 @@ typedef std::chrono::time_point<std::chrono::system_clock> timeStamp;
 		unsigned int capacity;
 
 	public:
-		void getFreeRooms(timeStamp Start,timeStamp End);
+		Room();
+		static void getFreeRooms(timeStamp Start,timeStamp End);
 	};
 }
