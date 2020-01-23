@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "View.h"
 
 void hotel::View::display() {

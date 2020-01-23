@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "DamageView.h"
 
 void hotel::DamageView::createDamageForm(std::function<void(hotel::Damage)> onSubmit) {

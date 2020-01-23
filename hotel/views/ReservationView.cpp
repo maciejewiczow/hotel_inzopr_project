@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "ReservationView.h"
 
 void hotel::ReservationView::display(hotel::Room rooms) {
