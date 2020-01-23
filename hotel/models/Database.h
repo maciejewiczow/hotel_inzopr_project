@@ -2,26 +2,27 @@
 
 #include <SQLiteCpp/SQLiteCpp.h>
 #include "Repository.h"
-#include "Damage.h"
-#include "Room.h"
-#include "Reservation.h"
-#include "Guest.h"
 
 namespace hotel {
-	class Database {
-		SQLite::Database db;
-		static const char* db_filename;
+    class Room;
+    class Guest;
+    class Reservation;
+    class Damage;
 
-		/*Repository<Guest> guests;
-		Repository<Room> rooms;
-		Repository<Reservation> reservations;
-		Repository<Damage> damages;*/
+    class Database {
+        SQLite::Database db;
+        static const char* db_filename;
 
-	public:
-		
-		Database();
-		~Database();
 
-		static void set_filename(const char* name);
-	};
+    public:
+        Repository<Guest> guests;
+        Repository<Room> rooms;
+        Repository<Reservation> reservations;
+        Repository<Damage> damages;
+
+        Database();
+        ~Database();
+
+        static void set_filename(const char* name);
+    };
 }

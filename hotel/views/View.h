@@ -1,17 +1,14 @@
-#ifndef VIEW_H
-#define VIEW_H
+#pragma once
 
 namespace hotel {
-	class View {
+    class View {
 
-	private:
-		window Window;
+    private:
+        //window Window;
 
-	public:
-		void display();
+    public:
+        void display();
 
-		void refresh();
-	};
+        void refresh();
+    };
 }
-
-#endif
