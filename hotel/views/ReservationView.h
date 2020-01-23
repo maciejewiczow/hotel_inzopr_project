@@ -14,6 +14,9 @@ namespace hotel {
         void display(hotel::Reservation reservation);
 
         void createReservationForm(std::function<void(hotel::Reservation)> onSubmit);
+
+        // Inherited via View
+        virtual void display() override;
     };
 }
 

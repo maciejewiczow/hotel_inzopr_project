@@ -15,3 +15,7 @@ void hotel::ReservationView::createReservationForm(std::function<void(hotel::Res
 	// TODO - implement ReservationView::createReservationForm
 	throw "Not yet implemented";
 }
+
+void hotel::ReservationView::display()
+{
+}

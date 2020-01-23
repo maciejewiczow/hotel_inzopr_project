@@ -4,14 +4,18 @@
 #include <iostream>
 
 #include "models/Database.h"
+#include "views/MainView.h"
 
 int main() {
-    hotel::Database::set_filename("database.db");
+   /* hotel::Database::set_filename("database.db");*/
     initscr();
     start_color();
 
     try {
-        hotel::Database db;
+        /*hotel::Database db;*/
+
+        hotel::MainView main_v;
+        main_v.display();
     }
     catch(std::exception &e) {
         mvprintw(1, 10, "SQLite exception: ");

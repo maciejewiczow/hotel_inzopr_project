@@ -176,6 +176,7 @@
     <ClInclude Include="controllers\ReservationController.h" />
     <ClInclude Include="controllers\RoomController.h" />
     <ClInclude Include="curses\drawable.h" />
+    <ClInclude Include="views\MainView.h" />
     <ClInclude Include="models\Damage.h" />
     <ClInclude Include="models\Database.h" />
     <ClInclude Include="models\Guest.h" />
@@ -196,6 +197,7 @@
     <ClCompile Include="controllers\RoomController.cpp" />
     <ClCompile Include="curses\drawable.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="views\MainView.cpp" />
     <ClCompile Include="models\Damage.cpp" />
     <ClCompile Include="models\Database.cpp" />
     <ClCompile Include="models\Guest.cpp" />
@@ -213,6 +215,9 @@
     <ClCompile Include="views\ReservationView.cpp" />
     <ClCompile Include="views\View.cpp" />
     <ClCompile Include="curses\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="database.db" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
