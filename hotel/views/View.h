@@ -1,17 +1,16 @@
 #ifndef VIEW_H
 #define VIEW_H
 
+#include "curses/Window.h"
+
 namespace hotel {
-	class View {
+    class View {
+        curses::window win;
 
-	private:
-		Window window;
+    public:
+        virtual void display() = 0;
 
-	public:
-		void display();
-
-		void refresh();
-	};
+    };
 }
 
 #endif
