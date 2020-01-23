@@ -1,14 +1,13 @@
 #pragma once
 
+#include "curses/Window.h"
+
 namespace hotel {
     class View {
-
-    private:
-        //window Window;
+        curses::window win;
 
     public:
-        void display();
+        virtual void display() = 0;
 
-        void refresh();
     };
 }

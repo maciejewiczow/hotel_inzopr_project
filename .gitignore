@@ -37,3 +37,4 @@
 
 *.bak_*
 /PDCurses-3.9
+*.lck
