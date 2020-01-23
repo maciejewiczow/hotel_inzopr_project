@@ -1,13 +1,14 @@
-#ifndef GUESTVIEW_H
-#define GUESTVIEW_H
+#pragma once
+
+#include "View.h"
+#include <functional>
+#include "../models/Guest.h"
 
 namespace hotel {
-	class GuestView : hotel::View {
+    class GuestView: hotel::View {
 
 
-	public:
-		void createGuestForm(hotel::Function<hotel::Guest, void> onSubmit);
-	};
+    public:
+        void createGuestForm(std::function<void(hotel::Guest)> onSubmit);
+    };
 }
-
-#endif

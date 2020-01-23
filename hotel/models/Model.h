@@ -1,23 +1,26 @@
-#ifndef MODEL_H
-#define MODEL_H
+#pragma once
+
+#include <functional>
+#include "models/Database.h"
 
 namespace hotel {
-	class Model {
+    class Model;
+    using Predicate = std::function<bool(Model&)>;
 
-	private:
-		Database context;
+    class Model {
 
-	public:
-		hotel::Model* getAll();
+    protected:
+        Model() {};
 
-		hotel::Model getOne(Predicate p);
+    public:
+        hotel::Model* getAll();
 
-		void save();
+        hotel::Model getOne(Predicate p);
 
-		hotel::Model sort(hotel::Function<(Model, Model), bool> c);
+        void save();
 
-		hotel::Model* getAll(hotel::Function<hotel::Model, bool> p);
-	};
+        hotel::Model sort(std::function<bool(const Model&, const Model&)> c);
+
+        hotel::Model* getAll(Predicate p);
+    };
 }
-
-#endif

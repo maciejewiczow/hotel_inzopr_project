@@ -1,5 +1,4 @@
-#ifndef VIEW_H
-#define VIEW_H
+#pragma once
 
 #include "curses/Window.h"
 
@@ -12,5 +11,3 @@ namespace hotel {
 
     };
 }
-
-#endif

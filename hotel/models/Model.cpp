@@ -1,26 +1,24 @@
+#include "pch.h"
 #include "Model.h"
 
 hotel::Model* hotel::Model::getAll() {
-	// TODO - implement Model::getAll
-	throw "Not yet implemented";
+    return nullptr;
 }
 
-hotel::Model hotel::Model::getOne(Predicate p) {
-	// TODO - implement Model::getOne
-	throw "Not yet implemented";
+hotel::Model hotel::Model::getOne(hotel::Predicate p) {
+    return Model();
 }
 
 void hotel::Model::save() {
-	// TODO - implement Model::save
-	throw "Not yet implemented";
+
 }
 
-hotel::Model hotel::Model::sort(hotel::Function<(Model, Model), bool> c) {
-	// TODO - implement Model::sort
-	throw "Not yet implemented";
+hotel::Model hotel::Model::sort(std::function<bool(const Model&, const Model&)> c)
+{
+    return hotel::Model();
 }
 
-hotel::Model* hotel::Model::getAll(hotel::Function<hotel::Model, bool> p) {
-	// TODO - implement Model::getAll
-	throw "Not yet implemented";
+hotel::Model * hotel::Model::getAll(hotel::Predicate p)
+{
+    return nullptr;
 }

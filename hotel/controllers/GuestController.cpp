@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "GuestController.h"
 
 void hotel::GuestController::checkIn(hotel::Guest guest) {

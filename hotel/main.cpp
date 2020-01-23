@@ -3,25 +3,15 @@
 #include <curses.h>
 #include <iostream>
 
+#include "models/Database.h"
+
 int main() {
+    hotel::Database::set_filename("database.db");
     initscr();
     start_color();
 
     try {
-        SQLite::Database db("test.db",
-            SQLite::OPEN_CREATE | SQLite::OPEN_READWRITE);
-        std::cout << "SQLite database file '" << db.getFilename().c_str()
-            << "' opened successfully\n";
-
-        // Test if the 'test' table exists
-        const bool bExists = db.tableExists("test");
-        std::cout << "SQLite table 'test' exists=" << bExists << "\n";
-
-        // Get a single value result with an easy to use shortcut
-        const std::string value =
-            db.execAndGet("SELECT value FROM test WHERE id=2");
-        std::cout << "execAndGet=" << value.c_str() << std::endl;
-
+        hotel::Database db;
     }
     catch(std::exception &e) {
         mvprintw(1, 10, "SQLite exception: ");
