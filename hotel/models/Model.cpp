@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Model.h"
 
 hotel::Model* hotel::Model::getAll() {

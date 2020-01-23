@@ -14,6 +14,7 @@ typedef std::chrono::time_point<std::chrono::system_clock> timeStamp;
 
 	public:
 		Room();
+		Room(int, std::string, unsigned int);
 		static void getFreeRooms(timeStamp Start,timeStamp End);
 	};
 }

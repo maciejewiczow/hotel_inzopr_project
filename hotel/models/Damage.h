@@ -13,6 +13,7 @@ namespace hotel {
         float price;
 	public:
 		Damage();
+		Damage(int, std::string, float);
     };
 }
 

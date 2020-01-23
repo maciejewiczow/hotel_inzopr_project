@@ -4,15 +4,15 @@
 #include "Database.h"
 
 namespace hotel {
-	using predicate = std::function<Model>;
+	class Model;
+	using predicate = std::function<bool(Model&)>;
+
 	class Model {
 
 	protected:
 		Database context;
 
 		Model() {};
-
-		//virtual const char* get_table_name() = 0;
 
 	public:
 		hotel::Model* getAll();
@@ -21,9 +21,9 @@ namespace hotel {
 
 		void save();
 
-		hotel::Model sort(std::function<bool(Model, Model)> c);
+		hotel::Model sort(std::function<bool(const Model&, const Model&)> c);
 
-		hotel::Model* getAll(std::function<bool(hotel::Model)> p);
+		hotel::Model* getAll(std::function<bool(const hotel::Model&)> p);
 	};
 }
 

@@ -9,6 +9,4 @@ hotel::Guest::Guest(int i,std::string add,std::string nm,std::string srnm,std::s
 	NIP = nip;
 	PESEL = psl;
 }
-hotel::Guest::Guest() {
-
-}
+hotel::Guest::Guest():ID(0),address(),name(),surname(),NIP(),PESEL() {}

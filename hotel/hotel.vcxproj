@@ -182,6 +182,7 @@
     <ClInclude Include="models\Reservation.h" />
     <ClInclude Include="models\Room.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="models\Repository.h" />
     <ClInclude Include="views\DamageView.h" />
     <ClInclude Include="views\GuestView.h" />
     <ClInclude Include="views\ReservationView.h" />
@@ -192,6 +193,7 @@
     <ClCompile Include="controllers\ReservationController.cpp" />
     <ClCompile Include="controllers\RoomController.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="models\Damage.cpp" />
     <ClCompile Include="models\Database.cpp" />
     <ClCompile Include="models\Guest.cpp" />
     <ClCompile Include="models\Model.cpp" />

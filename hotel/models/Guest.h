@@ -3,7 +3,7 @@
 #include "Model.h"
 
  namespace hotel {
-	class Guest : hotel::Model {
+	class Guest : Model {
 		static const char* table;
 
 		int ID;

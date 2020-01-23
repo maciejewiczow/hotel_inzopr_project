@@ -13,5 +13,6 @@ namespace hotel {
 		timeStamp End;
 	public:
 		Reservation();
+		Reservation(int,timeStamp,timeStamp);
 	};
 }
