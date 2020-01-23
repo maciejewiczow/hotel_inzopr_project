@@ -99,7 +99,6 @@
     <ClCompile Include="views\View.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-<<<<<<< HEAD
     <ClCompile Include="models\Guest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -113,12 +112,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="models\Damage.cpp">
-=======
     <ClCompile Include="curses\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="curses\drawable.cpp">
->>>>>>> master
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
