@@ -36,3 +36,4 @@
 **/Release
 
 *.bak_*
+*.lck
